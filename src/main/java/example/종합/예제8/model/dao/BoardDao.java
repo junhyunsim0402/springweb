@@ -1,10 +1,9 @@
 package example.종합.예제8.model.dao;
 
-import com.sun.jdi.connect.spi.Connection;
+import example.종합.예제8.model.dto.BoardDto;
 
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 
 public class BoardDao {
     private BoardDao(){ connect(); }
