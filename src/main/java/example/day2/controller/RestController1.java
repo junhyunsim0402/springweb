@@ -1,4 +1,4 @@
-package day2.controller;
+package example.day2.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;

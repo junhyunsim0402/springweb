@@ -1,4 +1,4 @@
-package day2.controller;
+package example.day2.controller;
 
 public class ExamDto {
     private String name;

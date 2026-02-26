@@ -1,4 +1,4 @@
-package day2.controller;
+package example.day2.controller;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -8,7 +8,7 @@ import java.util.Objects;
 // @Component  // 빈 등록
 // @Controller // + HTTP 통신 기능 => 사용처 : View(화면) 반환
 @RestController // + ResponseBody 포함    => 사용처: 값(JSON) 반환
-@RequestMapping("/day2")// @RequestMapping("/공통URL")   해당 컨트롤러내 메소드들이 사용하는 공통 URL정의
+@RequestMapping("/example/day2")// @RequestMapping("/공통URL")   해당 컨트롤러내 메소드들이 사용하는 공통 URL정의
 public class RestController3 {
     // 1. 클래스가 @RestController이므로 @ResponseBody 생략해도 된다
     @GetMapping("/task6")   // 클래스가 @RequestMapping("공통URL")을 가지므로 localhost:8080/day2/task6

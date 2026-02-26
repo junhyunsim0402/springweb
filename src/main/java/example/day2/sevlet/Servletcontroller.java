@@ -1,4 +1,4 @@
-package day2.sevlet;
+package example.day2.sevlet;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
@@ -15,7 +15,7 @@ import java.io.IOException;
 // 1. 현재 클래스의 "HttpServlet" 클래스로 부터 상속 받는다.
 // 2. 현재 클래스 위에 @WebServlet("/URL"), 주소 설정하고 중복없이 영문으로 정의한다(한글은 깨질 가능성이 있음)
 // 3. (스프링환경에만 해당) AppStart위에 순수 클래스를 사용할거
-@WebServlet("/day2/sevlet") // --> localhost:8080/day2/servlet 요청시 통신 가능한 클래스 정의
+@WebServlet("/example/day2/sevlet") // --> localhost:8080/day2/servlet 요청시 통신 가능한 클래스 정의
 public class Servletcontroller extends HttpServlet {
 
     // 순수 자바의 메소드/함수

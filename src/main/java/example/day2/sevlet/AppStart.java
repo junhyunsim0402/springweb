@@ -1,4 +1,4 @@
-package day2.sevlet;
+package example.day2.sevlet;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
