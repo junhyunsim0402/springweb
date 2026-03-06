@@ -4,6 +4,8 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -24,6 +26,31 @@ public class GoodsService {
         return false;
     }
 
+    public List<GoodsDto> 전체조회(){
+        List<GoodsEntity> goodsEntityList=goodsRepository.findAll();
+        List<GoodsDto> goodsDtoList=new ArrayList<>();
+        goodsEntityList.forEach(entity->{
+            GoodsDto goodsDto=new GoodsDto();
+            goodsDto.setGno(entity.getGno());
+            goodsDto.setGprice(entity.getGprice());
+            goodsDto.setGname(entity.getGname());
+            goodsDto.setGdesc(entity.getGdesc());
+            goodsDto.setCreateDate(entity.getCreateDate().toString());
+            goodsDto.setUpdateDate(entity.getUpdateDate().toString());
+            goodsDtoList.add(goodsDto);
+        });
+        return goodsDtoList;
+    }
+
+    public GoodsDto 개별조회(int bno){
+        Optional<GoodsEntity> optional=goodsRepository.findById(bno);
+        if(optional.isPresent()){
+            GoodsEntity entity=optional.get();
+            return entity.toDto();
+        }
+        return null;
+    }
+
     // 2. 수정
     @Transactional  // 수정시 여러개 setter 사용함으로써 단일 실행하기 위함
     public boolean 수정(GoodsDto goodsDto){
@@ -40,5 +67,13 @@ public class GoodsService {
             return true;
         }
         else{ return false; }
+    }
+    public boolean 삭제(int gno){
+        Optional<GoodsEntity> optional=goodsRepository.findById(gno);
+        if(optional.isPresent()){
+            goodsRepository.deleteById(gno);
+            return true;
+        }
+        return false;
     }
 }

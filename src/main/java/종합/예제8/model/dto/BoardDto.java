@@ -1,4 +1,4 @@
-package example.종합.예제8.model.dto;
+package 종합.예제8.model.dto;
 
 public class BoardDto {
     // 멤버변수 : 데이터베이스의 속성명 과 일치 , +기능에 따라 추가

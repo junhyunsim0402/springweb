@@ -1,10 +1,10 @@
 package example.day6.entity;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import 종합.예제10.board.dto.BoardDto;
+
+import java.util.List;
 
 @RestController
 public class GoodsController {
@@ -14,6 +14,19 @@ public class GoodsController {
     @PostMapping("/goods")
     public boolean 저장(@RequestBody GoodsDto goodsDto){
         boolean result=goodsService.저장(goodsDto);
+        return result;
+    }
+
+    // 전체조회
+    @GetMapping("/goods")
+    public List<GoodsDto> 전체조회(){
+        List<GoodsDto> result=goodsService.전체조회();
+        return result;
+    }
+
+    @GetMapping("/goods/detail")
+    public GoodsDto 개별조회(@RequestParam int gno){
+        GoodsDto result=goodsService.개별조회(gno);
         return result;
     }
 

@@ -1,8 +1,7 @@
-package example.종합.예제9.model.dao;
+package 종합.예제9.model.dao;
 
-import example.종합.예제9.model.dto.BoardDto;
+import 종합.예제9.model.dto.BoardDto;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.sql.*;

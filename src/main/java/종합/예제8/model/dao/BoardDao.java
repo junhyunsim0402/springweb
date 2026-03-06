@@ -1,6 +1,6 @@
-package example.종합.예제8.model.dao;
+package 종합.예제8.model.dao;
 
-import example.종합.예제8.model.dto.BoardDto;
+import 종합.예제8.model.dto.BoardDto;
 
 import java.sql.*;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package example.종합.예제9.model.dto;
+package 종합.예제9.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

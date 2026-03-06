@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <div>
+        <h3>입력 구역</h3>
+        내용:<input id="bcontent"><br>
+        작성자:<input id="bwriter"><br>
+        <button onclick="onWrite()"> 등록하기 </button>
+    </div>
+    <div>
+        <h3>출력 구역</h3>
+        <table id="boardTable">
+            <thead>
+            <tr>
+                <td>번호</td>
+                <td>내용</td>
+                <td>작성자</td>
+                <td>작성일</td>
+                <td>비고</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>안녕하세요</td>
+                <td>유재석</td>
+                <td>2026-02-27</td>
+                <td>
+                    <button onclick="onDelete()">삭제</button>
+                    <button onclick="onUpdate()">수정</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="board.js"></script>
+</body>
+</html>

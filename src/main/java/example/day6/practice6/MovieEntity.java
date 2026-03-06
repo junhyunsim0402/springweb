@@ -26,8 +26,8 @@ public class MovieEntity extends MovieBaseTime{
                 .director(director)
                 .rating(rating)
                 .releasedate(releasedate)
-                .createDate(getCreateDate().toString())
-                .updateDate(getUpdateDate().toString())
+                .createDate(getCreateDate()!=null ? getCreateDate().toString() : null)
+                .updateDate(getUpdateDate()!=null ? getUpdateDate().toString() : null)
                 .build();
     }
 }

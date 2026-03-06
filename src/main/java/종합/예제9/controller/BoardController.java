@@ -1,7 +1,7 @@
-package example.종합.예제9.controller;
+package 종합.예제9.controller;
 
-import example.종합.예제9.model.dao.BoardDao;
-import example.종합.예제9.model.dto.BoardDto;
+import 종합.예제9.model.dao.BoardDao;
+import 종합.예제9.model.dto.BoardDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

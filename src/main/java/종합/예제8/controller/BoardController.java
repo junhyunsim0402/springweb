@@ -1,7 +1,7 @@
-package example.종합.예제8.controller;
+package 종합.예제8.controller;
 
-import example.종합.예제8.model.dao.BoardDao;
-import example.종합.예제8.model.dto.BoardDto;
+import 종합.예제8.model.dao.BoardDao;
+import 종합.예제8.model.dto.BoardDto;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;

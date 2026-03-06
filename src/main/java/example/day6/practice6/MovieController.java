@@ -12,6 +12,11 @@ public class MovieController {
         List<MovieDto> result=movieService.전체조회();
         return result;
     }
+    @GetMapping("movie/detail")
+    public MovieDto 개별조회(@RequestParam int movieid){
+        MovieDto result=movieService.개별조회(movieid);
+        return result;
+    }
     @PostMapping("/movie") public boolean 저장(@RequestBody MovieDto movieDto){
         boolean result=movieService.저장(movieDto);
         return result;

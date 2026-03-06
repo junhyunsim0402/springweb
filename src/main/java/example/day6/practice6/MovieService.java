@@ -15,16 +15,27 @@ public class MovieService {
     public List<MovieDto> 전체조회(){
         List<MovieEntity> movieEntityList=movieRepository.findAll();
         List<MovieDto> movieDtoList=new ArrayList<>();
-        movieDtoList.forEach(entity->{
+        movieEntityList.forEach(entity->{
             MovieDto movieDto=new MovieDto();
             movieDto.setMovieid(entity.getMovieid());
             movieDto.setTitle(entity.getTitle());
             movieDto.setDirector(entity.getDirector());
             movieDto.setReleasedate(entity.getReleasedate());
             movieDto.setRating(entity.getRating());
+            movieDto.setCreateDate(entity.getCreateDate().toString());
+            movieDto.setUpdateDate(entity.getUpdateDate().toString());
             movieDtoList.add(movieDto);
         });
         return movieDtoList;
+    }
+
+    public MovieDto 개별조회(int movieid){
+        Optional<MovieEntity> optional=movieRepository.findById(movieid);
+        if(optional.isPresent()){
+            MovieEntity entity=optional.get();
+            return entity.toDto();
+        }
+        return null;
     }
 
     public boolean 저장(MovieDto movieDto){
@@ -48,8 +59,12 @@ public class MovieService {
     }
 
     public boolean 삭제(int movieid){
-        movieRepository.deleteById(movieid);
-        return true;
+        Optional<MovieEntity> optional=movieRepository.findById(movieid);
+        if(optional.isPresent()) {
+            movieRepository.deleteById(movieid);
+            return true;
+        }
+        return false;
     }
 
 }
