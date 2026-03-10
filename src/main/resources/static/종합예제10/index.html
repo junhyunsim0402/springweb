@@ -5,17 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-<div>
-    <div>
-        <h3>입력 구역</h3>
-        내용:<input id="bcontent"><br>
-        작성자:<input id="bwriter"><br>
-        <button onclick="onWrite()"> 등록하기 </button>
-    </div>
-    <div>
-        <h3>출력 구역</h3>
-        <table id="boardTable">
-            <thead>
+    <h3> 종합 예제 10 </h3>
+    <h3> 게시판 현황 </h3>
+    <a href="/종합예제10/write.html">글쓰기</a>
+    <table>
+        <thead>
             <tr>
                 <td>번호</td>
                 <td>내용</td>
@@ -23,24 +17,22 @@
                 <td>작성일</td>
                 <td>비고</td>
             </tr>
-            </thead>
-            <tbody>
+        </thead>
+        <tbody id="boardTable">
             <tr>
                 <td>1</td>
-                <td>안녕하세요</td>
-                <td>유재석</td>
-                <td>2026-02-27</td>
+                <td><a href="detail.html">제목1</a></td>
+                <td>내용1</td>
+                <td>2026-03-06</td>
                 <td>
                     <button onclick="onDelete()">삭제</button>
                     <button onclick="onUpdate()">수정</button>
                 </td>
             </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
+        </tbody>
+    </table>
 
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="board.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

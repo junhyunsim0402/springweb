@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> 게시물 상세 </h3>
+    <a href="/종합예제10/index.html">뒤로가기</a>
+    <div id="boardBox">
+        제목 : <div>제목이 들어갈 자리</div>
+        작성자/작성일 : <div>작성자/작성일 들어갈 자리</div>
+        내용 : <div>내용이 들어갈 자리</div>
+        <button onclick="개별수정()">수정하기</button>
+        <button onclick="개별삭제()">삭제하기</button>
+    </div>
+
+    <div id="replyBox">
+    <div>
+        댓글 작성자: <input id="rwriter">
+        댓글 내용: <textarea id="rcontent"></textarea>
+        <button onclick="댓글등록()">댓글 등록</button>
+    </div>
+    <div id="replyListBox">
+        <div style="margin: 20px 0px;">
+            <span>유재석</span> <span>2026-03-06</span>
+            <span><button>수정</button><button>삭제</button></span>
+            <div>댓글내용 자리 (샘플)</div>
+        </div>
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="detail.js"></script>
+</body>
+</html>

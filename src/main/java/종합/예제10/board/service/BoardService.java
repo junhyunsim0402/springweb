@@ -1,9 +1,5 @@
 package 종합.예제10.board.service;
 
-import example.day5.practice5.BookDto;
-import example.day5.practice5.BookEntity;
-import example.day6.entity.GoodsDto;
-import example.day6.entity.GoodsEntity;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

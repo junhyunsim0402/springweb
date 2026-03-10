@@ -39,7 +39,7 @@ public class BoardController {
     }
 
     // 삭제
-    @DeleteMapping public boolean delete(@RequestParam int bno){
+    @DeleteMapping("/board") public boolean delete(@RequestParam int bno){
         boolean result= boardService.delete(bno);
         return result;
     }
