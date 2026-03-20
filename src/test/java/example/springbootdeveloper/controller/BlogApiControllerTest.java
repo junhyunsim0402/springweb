@@ -1,6 +1,6 @@
 package example.springbootdeveloper.controller;
 
-import example.springbootdeveloper.repository.BlogRepository;
+import example.day9.springbootdeveloper.repository.BlogRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
