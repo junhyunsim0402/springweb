@@ -1,0 +1,23 @@
+# SessoionController 참고 #
+
+HttpServletRequest request : HTTP 요청 정보 담고있는 객체
+
+System.out.println(request.getRemoteAddr());            // 요청한 클라이언트(사용자) IP주소 얻기 ( 로그/위치 추적/조회수 등 )
+System.out.println(request.getHeader("User-Agent"));    // 요청한 클라이언트 브라우저 정보
+System.out.println(request.getSession());               // 요청한 클라이언트 세선 객체 정보
+
+// 2) 세션
+HttpSession session=request.getSession();   // 세션 객체
+System.out.println("session.getId() = " + session.getId()); // 세션의 식별번호 반환, 브라우저/디바이스 마다 할당
+System.out.println("session.getCreationTime() = " + session.getCreationTime()); // 세션의 최소생성 시간
+System.out.println("session.getLastAccessedTime() = " + session.getLastAccessedTime()); // 세션의 마지막 접근 시간
+System.out.println("session.getMaxInactiveInterval() = " + session.getMaxInactiveInterval());   // 세션의 최대 유효시간(초)
+
+// 3) 세션 객체 내 값 저장 == 로그인
+session.setAttribute("data",data); // 세션 객체내 값(key:value) 저장
+System.out.println("session.getAttribute(\"data\") = " + session.getAttribute("data")); // 세션객체내 값(key) 호출
+
+// 방법 1) 세션 전체 초기화
+session.invalidate();   // 세션객체내 모든 속성 제거
+// 방법 2) 특성 속성 초기화
+session.removeAttribute("data");
