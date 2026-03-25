@@ -36,7 +36,7 @@ insert into todo (title, content, done, cno, create_date, update_date) values('�
 insert into todo (title, content, done, cno, create_date, update_date) values('LLM 실습', 'OpenAI API 테스트', false, 1, now(), now());
 insert into todo (title, content, done, cno, create_date, update_date) values('팀 프로젝트', '프론트엔드 UI 구현', false, 3, now(), now());
 insert into todo (title, content, done, cno, create_date, update_date) values('Git 정리', 'Git Flow 복습', false, 3, now(), now());
-*/
+
 -- ---------------- Member sample insert ----------------
 INSERT INTO member (mid, pwd, nickname, create_date, update_date) VALUES ('user1', '1234', '유저1', now(), now());
 INSERT INTO member (mid, pwd, nickname, create_date, update_date) VALUES ('user2', '1234', '유저2', now(), now());
@@ -65,3 +65,4 @@ INSERT INTO board (btitle, bcontent, bfile, mno, create_date, update_date) VALUE
 INSERT INTO board (btitle, bcontent, bfile, mno, create_date, update_date) VALUES ('열여덟 번째 게시글', '내용입니다18', 'https://placehold.co/100', 3, now(), now());
 INSERT INTO board (btitle, bcontent, bfile, mno, create_date, update_date) VALUES ('열아홉 번째 게시글', '내용입니다19', null, 4, now(), now());
 INSERT INTO board (btitle, bcontent, bfile, mno, create_date, update_date) VALUES ('스무 번째 게시글', '내용입니다20', 'https://placehold.co/100', 5, now(), now());
+ */
