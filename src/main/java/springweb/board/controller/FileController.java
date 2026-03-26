@@ -1,4 +1,4 @@
-package example.day16;
+package springweb.board.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
