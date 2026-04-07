@@ -23,6 +23,7 @@ public class MemberService {
         // *** 저장 하기 전에 입력받은 비밀번호를 암호화 *** ///
         String pwd1= passwordEncoder.encode(saveEntity.getPwd());// - 입력받은 패스워드 암호화
         saveEntity.setPwd(pwd1);    // 암호화된 패스워드 대입
+        System.out.println("로그인 시도 패스워드: " + memberDto.getPwd());
         // 2] jpa의 save메소드
         MemberEntity saved=memberRepository.save(saveEntity);
         // 3] 확인

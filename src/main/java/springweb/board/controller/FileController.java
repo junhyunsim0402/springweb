@@ -26,7 +26,7 @@ public class FileController {
     //
     //
     public ResponseEntity<?> downLoad(MultipartFile downLoadFile){
-        return ResponseEntity.ok(fileService.downLoad(downLoadFile));
+        return ResponseEntity.ok(fileService.upload(downLoadFile));
     }
     // [3] 서버에 파일 삭제
 }

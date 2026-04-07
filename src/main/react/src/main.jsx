@@ -1,32 +1,66 @@
 
+
+
+// import './index.css'
+// import App from './App.jsx'
+
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-
 // ** index.html 에서 root 가져오기 **
-const root = document.querySelector('#root');
+const root = document.querySelector('#root'); 
 
-import Exam2 from './chapter11/Exam2.jsx';
-createRoot(root).render(
+// reactweb
+import App from './reactweb/App';
+import {BrowserRouter} from 'react-router-dom'
+createRoot( root ).render(
     <BrowserRouter>
-        <Exam2 />
+        <App />
     </BrowserRouter>
-);
-import { BrowserRouter } from "react-router-dom"; // [1] 라이브러리 import하기
+)
 
-// import Exam1 from './chapter10/Exam1.jsx';
-// createRoot(root).render(<Exam1 />);
+// practice1
+// import App from './practice1/App';
+// import {BrowserRouter} from 'react-router-dom'
+// createRoot( root ).render(
+//     <BrowserRouter>
+//         <App />
+//     </BrowserRouter>
+// )
 
+// chapter 12 예제 
+// import App from './chapter12/App'; // chapter12 폴더내 App
+// import {BrowserRouter} from 'react-router-dom'
+// createRoot( root ).render( 
+//     <BrowserRouter>
+//         <App />     
+//     </BrowserRouter>
+// );
+
+
+// chapter 11 예제
+// import Exam2 from './chapter11/Exam2.jsx';
+// import {BrowserRouter} from 'react-router-dom'; // [1] 라이브러리 import 하기 
+// [2] 최초 렌더링 되는 컴포넌트에 BrowserRouter 감싼다.
+// createRoot( root ).render( 
+//     <BrowserRouter>  
+//         <Exam2 />
+//     </BrowserRouter>
+// );
+
+// chapter 10 예제
+// import Exam1 from './chapter10/Exam1.jsx'
+// createRoot( root ).render( <Exam1 /> );
+
+// chapter 9 예제
 // import Exam2 from './chapter9/Exam2.jsx';
 // createRoot( root ).render( <Exam2 /> );
 
 // chapter 8 예제
-// import Exam1  from './chapter8/Exam1.jsx';
+// import Exam1 from './chapter8/Exam1.jsx';
 // createRoot( root ).render( <Exam1 /> );
 
 // chapter 7 예제
 // import Exam2 from './chapter7/Exam2.jsx';
-// createRoot( root ).render( <Exam2 /> );
+// createRoot( root ).render( <Exam2 />)
 
 // chapter 6 예제
 // import Exam1 from './chapter6/Exam1.jsx';
