@@ -29,7 +29,7 @@ export default function DepartmentManager() {
     }
   };
 
-  // 3. 맴버 수정
+  // 3. 수정
   const updateCategory = async (categoryId) => {
     const newName = prompt("새 부서명 입력")
     if (!newName) return
@@ -41,11 +41,11 @@ export default function DepartmentManager() {
     }
   }
 
-  // 4. 멤버 삭제
+  // 4. 삭제
   const deleteCategory = async (categoryId) => {
     try {
-      const res = await axios.delete(`http://localhost:8080/category/delete/${categoryId}`);
-      setCategoryList(res.data);
+      await axios.delete(`http://localhost:8080/category/delete/${categoryId}`);
+      onFindAll();
     } catch (e) {
       console.log("삭제 실패", e);
     }

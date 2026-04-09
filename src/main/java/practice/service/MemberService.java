@@ -4,7 +4,6 @@ import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import practice.dto.CategoryDto;
 import practice.dto.MemberDto;
 import practice.entity.CategoryEntiy;
 import practice.entity.MemberEntity;
@@ -19,7 +18,6 @@ import java.util.Optional;
 public class MemberService {
     private final MemberRepository memberRepository;
     private final FileService fileService;
-    private final CategoryRepository categoryRepository;
     // 사원 조회
     public List<MemberDto> findAll(){
         List<MemberEntity> memberEntityList=memberRepository.findAll();
@@ -50,12 +48,10 @@ public class MemberService {
     // 사원 수정
     @Transactional
     public boolean updateMember(MemberDto memberDto){
-        CategoryEntiy categoryEntiy=new CategoryEntiy();
         MemberEntity memberEntity=memberRepository.findById(memberDto.getMno())
                 .orElseThrow(()->new EntityNotFoundException("엔티티 없음"));
         memberEntity.setMname(memberDto.getMname());
         memberEntity.setPosition(memberDto.getPosition());
-        memberEntity.setCategoryEntiy(categoryEntiy);
         memberEntity.setMfile(memberDto.getMfile());
         return true;
     }

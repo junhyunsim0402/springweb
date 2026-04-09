@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import practice.dto.CategoryDto;
-import practice.dto.MemberDto;
 import practice.service.CategoryService;
 
 @RestController
@@ -28,7 +27,7 @@ public class CategoryController {
     }
 
     // 부서 삭제
-    @DeleteMapping("/delete{categoryId}") public ResponseEntity<?> deleteMember(@PathVariable Integer categoryId){
+    @DeleteMapping("/delete/{categoryId}") public ResponseEntity<?> deleteMember(@PathVariable Integer categoryId){
         return ResponseEntity.ok(categoryService.deleteCategory(categoryId));
     }
 }
